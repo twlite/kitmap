@@ -154,7 +154,7 @@ KitMap works on:
 
 ### Frontend (React)
 
-- React 18
+- React
 - TypeScript
 - Tailwind CSS
 - shadcn/ui components
