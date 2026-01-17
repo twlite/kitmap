@@ -3,6 +3,7 @@
 
 # Web - node_modules only, dist is needed for build
 /web/node_modules/
+/web/dist/
 
 # IDE
 .idea/
