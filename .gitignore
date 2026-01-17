@@ -1,0 +1,25 @@
+# Rust
+/target/
+
+# Web - node_modules only, dist is needed for build
+/web/node_modules/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Database (local development)
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+
+# Temporary files
+*.tmp
+*.temp

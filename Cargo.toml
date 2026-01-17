@@ -1,0 +1,62 @@
+[package]
+name = "kitmap"
+version = "0.1.0"
+edition = "2021"
+description = "A cross-platform CLI for tracking keyboard usage and generating heatmaps and statistics"
+authors = ["Twilight"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/twlite/kitmap"
+homepage = "https://github.com/twlite/kitmap"
+categories = ["command-line-utilities"]
+keywords = ["cli", "keyboard", "heatmap", "productivity", "analytics"]
+include = [
+    "src/**",
+    "Cargo.toml",
+    "Cargo.lock",
+    "README.md",
+    "LICENSE",
+    "web/dist/**",
+]
+
+[[bin]]
+name = "kitmap"
+path = "src/main.rs"
+
+
+[dependencies]
+# CLI
+clap = { version = "4.4", features = ["derive"] }
+
+# Key listening
+rdev = "0.5"
+
+# Database
+rusqlite = { version = "0.30", features = ["bundled"] }
+
+# Serialization
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# Time handling
+chrono = { version = "0.4", features = ["serde"] }
+
+# Web server for preview
+axum = "0.7"
+tokio = { version = "1.35", features = ["full"] }
+tower-http = { version = "0.5", features = ["cors", "fs"] }
+
+# Error handling
+anyhow = "1.0"
+thiserror = "1.0"
+
+# Terminal UI
+crossterm = "0.27"
+
+# Misc
+directories = "5.0"
+include_dir = "0.7"
+ctrlc = { version = "3.4", features = ["termination"] }
+
+[dev-dependencies]
+tempfile = "3.9"
