@@ -60,8 +60,8 @@ cd kitmap
 
 # Build the web UI
 cd web
-npm install
-npm run build
+bun install
+bun run build
 cd ..
 
 # Build the Rust CLI
